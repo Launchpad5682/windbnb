@@ -3,8 +3,12 @@
   margin: 0;
 }
 
-body::-webkit-scrollbar{
-    display: none;
+:root {
+  --radius: 0.8rem;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .App {

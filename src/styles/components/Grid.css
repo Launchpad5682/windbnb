@@ -2,19 +2,18 @@ div.grid-area {
   display: column;
   column-gap: 4rem;
   column-count: 3;
-  width: 80rem;
+  width: 100rem;
   margin: 0 auto;
-  margin-bottom: 200px;
 }
 
 img {
-  width: 25rem;
+  width: 30rem;
   border-radius: 1.5rem;
 }
 
 div.image-box {
   border: 0.1rem solid black;
-  width: 25rem;
+  width: 30rem;
   margin-bottom: 4rem;
   height: fit-content;
   box-sizing: border-box;
@@ -40,15 +39,3 @@ div.image-footer {
   display: inline-block;
   padding-top: 1rem;
 }
-
-/* div.grid-area {
-  display: column;
-}
-
-img {
-  width: 20rem;
-}
-
-div.image-box {
-  height: max-content;
-} */

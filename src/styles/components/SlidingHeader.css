@@ -1,0 +1,64 @@
+div.sliding-header {
+  width: 100vw;
+  height: 25rem;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  padding-left: 15rem;
+  padding-top: 5rem;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+form.form-header-class {
+  height: fit-content;
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+}
+
+.search-input-header {
+  height: 2.5em;
+  width: 25rem;
+  outline: none;
+  border-radius: 5rem;
+  border: 1px solid lightgray;
+}
+
+input.search-input-header {
+  padding-left: 20px;
+}
+
+button#right-button-header {
+  font-size: 1rem;
+  width: 10rem;
+  border: none;
+  background-color: orangered;
+  color: white;
+}
+
+div.drop-downs {
+  margin: 1.8rem 0;
+  display: flex;
+}
+
+div.drop-down-div {
+  width: 38rem;
+}
+
+div.city-list {
+  display: flex;
+  margin: 0.8rem 0;
+}
+
+div.city-list > p{
+  padding-left: 0.8rem;
+}
+
+div.city-list > img {
+  width: 1rem;
+}

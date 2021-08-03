@@ -4,20 +4,22 @@ div.grid-area {
   column-count: 3;
   width: 80rem;
   margin: 0 auto;
+  margin-bottom: 200px;
 }
 
 img {
-  width: 20rem;
+  width: 25rem;
   border-radius: 1.5rem;
 }
 
 div.image-box {
   border: 0.1rem solid black;
-  width: 20rem;
+  width: 25rem;
   margin-bottom: 4rem;
   height: fit-content;
   box-sizing: border-box;
   break-inside: avoid-column;
+  margin-bottom: 2rem;
 }
 
 div.image-footer {

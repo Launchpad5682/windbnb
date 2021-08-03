@@ -1,0 +1,16 @@
+div.counter-div {
+}
+
+div.counter-container {
+  margin: 0.6rem 0;
+  width: 5rem;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+button.counter-btn{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 0.3rem;
+}

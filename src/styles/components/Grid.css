@@ -18,6 +18,7 @@ div.image-box {
   height: fit-content;
   box-sizing: border-box;
   break-inside: avoid-column;
+  page-break-inside: avoid; /*for firefox*/
   margin-bottom: 2rem;
 }
 

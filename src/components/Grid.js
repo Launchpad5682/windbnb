@@ -4,7 +4,8 @@ import { PlacesContext } from "../context/PlacesContext";
 import "../styles/components/Grid.css";
 
 function GridImages() {
-  const { selectedCity } = useContext(PlacesContext);
+  const { city } = useContext(PlacesContext);
+  const [selectedCity] = city;
   let count = 0;
   let keyTag;
   return (

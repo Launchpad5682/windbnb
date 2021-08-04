@@ -5,7 +5,8 @@ import { PlacesContext } from "../context/PlacesContext";
 
 function SlidingHeader() {
   const cityList = ["Helsinki", "Turku", "Vaasa", "Oulu"];
-  const { selectedCity, setSelectedCity } = useContext(PlacesContext);
+  const { city } = useContext(PlacesContext);
+  const [selectedCity, setSelectedCity] = city;
   const [cities, setCities] = useState(false);
   const [counters, setCounters] = useState(false);
 

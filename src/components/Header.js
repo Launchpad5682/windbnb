@@ -1,20 +1,24 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import "../styles/components/Header.css";
 import windBnBIcon from "../assets/logo.svg";
 import SlidingHeader from "./SlidingHeader";
 import Overlay from "./Overlay";
+import { SlidingHeaderContext } from "../context/SlidingHeaderContext";
+import { PlacesContext } from "../context/PlacesContext";
 
 function Header() {
-  const [slideDownHeader, setSlideDownHeader] = useState(true);
-  const onOverlay = true;
+  const { slideDownHeader, setSlideDownHeader } =
+    useContext(SlidingHeaderContext);
+
+  const { city } = useContext(PlacesContext);
+  const [selectedCity] = city;
   function clickHandler() {
-    console.log("Hello form");
-    // setSlideDownHeader(!slideDownHeader);
+    setSlideDownHeader(true);
   }
 
   return (
     <div>
-      {onOverlay ? <Overlay onClick={onOverlay} /> : null}
+      {slideDownHeader ? <Overlay /> : null}
       {slideDownHeader ? <SlidingHeader /> : null}
       <header className="header-class">
         <img src={windBnBIcon} className="svg-logo" alt="windBnB Logo" />
@@ -24,7 +28,7 @@ function Header() {
             type="text"
             className="search-input"
             id="left-input"
-            placeholder="Helsinki, Finland"
+            placeholder={selectedCity}
           />
           <input
             type="text"

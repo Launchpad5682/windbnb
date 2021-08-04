@@ -3,8 +3,7 @@ import { SlidingHeaderContext } from "../context/SlidingHeaderContext";
 import "../styles/components/Overlay.css";
 
 function Overlay(props) {
-  const { slideDownHeader, setSlideDownHeader } =
-    useContext(SlidingHeaderContext);
+  const { setSlideDownHeader } = useContext(SlidingHeaderContext);
 
   function offOverlay() {
     setSlideDownHeader(false);

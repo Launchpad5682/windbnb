@@ -7,23 +7,26 @@ function Counter(props) {
   const { adult, child } = useContext(PlacesContext);
   const [adults, setAdults] = adult;
   const [children, setChildren] = child;
-
-  console.log(adults);
+  let count;
   function incrementCounter() {
     if (type === "adults") {
-      setAdults(adults + 1);
+      count = adults + 1;
+      setAdults(count);
     }
     if (type === "children") {
-      setChildren(children + 1);
+      count = children + 1;
+      setChildren(count);
     }
-    console.log(adults);
   }
+
   function decrementCounter() {
     if (type === "adults") {
-      if (adults - 1 >= 0) setAdults(adults - 1);
+      count = adults - 1;
+      if (count >= 0) setAdults(count);
     }
     if (type === "children") {
-      if (children - 1 >= 0) setChildren(children - 1);
+      count = children - 1;
+      if (count >= 0) setChildren(count);
     }
   }
 

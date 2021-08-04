@@ -6,6 +6,7 @@ export const PlacesProvider = (props) => {
   const [selectedCity, setSelectedCity] = useState("Helsinki");
   const [adults, setAdults] = useState(0);
   const [children, setChildren] = useState(0);
+  const [guests, setGuests] = useState("Add Guests");
 
   return (
     <PlacesContext.Provider
@@ -13,6 +14,7 @@ export const PlacesProvider = (props) => {
         city: [selectedCity, setSelectedCity],
         adult: [adults, setAdults],
         child: [children, setChildren],
+        guest: [guests, setGuests],
       }}
     >
       {props.children}

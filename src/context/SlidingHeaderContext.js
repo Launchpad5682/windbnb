@@ -3,7 +3,7 @@ import { useState, createContext } from "react";
 export const SlidingHeaderContext = createContext();
 
 export const SlidingHeaderProvider = (props) => {
-  const [slideDownHeader, setSlideDownHeader] = useState(true);
+  const [slideDownHeader, setSlideDownHeader] = useState(false);
 
   return (
     <SlidingHeaderContext.Provider

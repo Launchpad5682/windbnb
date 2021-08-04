@@ -18,7 +18,9 @@ function SlidingHeader() {
         <input
           type="text"
           className="search-input-header"
-          id="middle-input-header"
+          id="middle-input-head  <React.StrictMode>
+          <App />
+        </React.StrictMode>er"
           placeholder="Add Guests"
         />
         <button className="search-input-header" id="right-button-header">

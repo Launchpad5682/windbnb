@@ -1,12 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import { PlacesProvider } from "./context/PlacesContext";
+import { SlidingHeaderProvider } from "./context/SlidingHeaderContext";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <PlacesProvider>
+    <SlidingHeaderProvider>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </SlidingHeaderProvider>
+  </PlacesProvider>,
+  document.getElementById("root")
 );
-
-

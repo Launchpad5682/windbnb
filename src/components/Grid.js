@@ -1,18 +1,21 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import Data from "../assets/stays.json";
+import { PlacesContext } from "../context/PlacesContext";
 import "../styles/components/Grid.css";
 
 function GridImages() {
-  let superHost = false;
-  const [city, setCity] = useState("Vaasa");
-
+  const { selectedCity } = useContext(PlacesContext);
+  let count = 0;
+  let keyTag;
   return (
     <div className="grid-area">
       {Data.map((data) => {
-        if (city === data.city) {
+        if (selectedCity === data.city) {
+          count += 1;
+          keyTag = `key-tag-${count}`;
           return (
-            <div className="image-box">
-              <img src={data.photo} />
+            <div className="image-box" key={keyTag}>
+              <img src={data.photo} alt="places" />
               <div className="image-footer">
                 {data.superHost ? (
                   <span className="superhost-span">SUPER HOST</span>
@@ -25,6 +28,8 @@ function GridImages() {
               </div>
             </div>
           );
+        } else {
+          return null;
         }
       })}
     </div>

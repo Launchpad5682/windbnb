@@ -66,8 +66,16 @@ function SlidingHeader() {
         ) : null}
         {counters ? (
           <div className="drop-down-div right-down-div">
-            <Counter heading="Adults" subHeading="Ages 13 or above" />
-            <Counter heading="Children" subHeading="Ages 2-12" />
+            <Counter
+              heading="Adults"
+              subHeading="Ages 13 or above"
+              type="adults"
+            />
+            <Counter
+              heading="Children"
+              subHeading="Ages 2-12"
+              type="children"
+            />
           </div>
         ) : null}
       </div>

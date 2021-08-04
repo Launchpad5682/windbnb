@@ -9,9 +9,11 @@ import { PlacesContext } from "../context/PlacesContext";
 function Header() {
   const { slideDownHeader, setSlideDownHeader } =
     useContext(SlidingHeaderContext);
-
+  const { guest } = useContext(PlacesContext);
   const { city } = useContext(PlacesContext);
   const [selectedCity] = city;
+  const [guests] = guest;
+
   function clickHandler() {
     setSlideDownHeader(true);
   }
@@ -34,7 +36,7 @@ function Header() {
             type="text"
             className="search-input"
             id="middle-input"
-            placeholder="Add Guests"
+            placeholder={guests}
           />
           <button className="search-input" id="right-button"></button>
         </form>

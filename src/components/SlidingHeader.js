@@ -1,14 +1,33 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import "../styles/components/SlidingHeader.css";
 import Counter from "./Counter";
 import { PlacesContext } from "../context/PlacesContext";
+import { SlidingHeaderContext } from "../context/SlidingHeaderContext";
 
 function SlidingHeader() {
   const cityList = ["Helsinki", "Turku", "Vaasa", "Oulu"];
-  const { city } = useContext(PlacesContext);
+  const { city, guest, adult, child } = useContext(PlacesContext);
+  const { setSlideDownHeader } = useContext(SlidingHeaderContext);
   const [selectedCity, setSelectedCity] = city;
   const [cities, setCities] = useState(false);
   const [counters, setCounters] = useState(false);
+  const [guests, setGuests] = guest;
+  const [adults] = adult;
+  const [children] = child;
+
+  useEffect(() => {
+    if (adults === 0 && children === 0) {
+      setGuests("Add Guests");
+    } else {
+      if (children === 1 || children === 0)
+        setGuests(`${adults} adults, ${children} child`);
+      else setGuests(`${adults} adults, ${children} children`);
+    }
+  }, [adults, children, setGuests]);
+
+  function submitHandler() {
+    setSlideDownHeader(false);
+  }
 
   function renderCitiesList() {
     setCities(true);
@@ -41,10 +60,14 @@ function SlidingHeader() {
           type="text"
           className="search-input-header"
           id="middle-input-head"
-          placeholder="Add Guests"
+          placeholder={guests}
           onClick={renderCounters}
         />
-        <button className="search-input-header" id="right-button-header">
+        <button
+          className="search-input-header"
+          id="right-button-header"
+          onClick={submitHandler}
+        >
           Search
         </button>
       </form>

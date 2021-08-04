@@ -4,14 +4,16 @@ import { PlacesContext } from "../context/PlacesContext";
 import "../styles/components/Grid.css";
 
 function GridImages() {
-  const { city } = useContext(PlacesContext);
+  const { city, adult, child } = useContext(PlacesContext);
   const [selectedCity] = city;
+  const [adults] = adult;
+  const [children] = child;
   let count = 0;
   let keyTag;
   return (
     <div className="grid-area">
       {Data.map((data) => {
-        if (selectedCity === data.city) {
+        if (selectedCity === data.city && adults + children <= data.maxGuests) {
           count += 1;
           keyTag = `key-tag-${count}`;
           return (

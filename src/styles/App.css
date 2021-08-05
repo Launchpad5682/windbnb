@@ -17,3 +17,21 @@ body::-webkit-scrollbar {
   box-sizing: border-box;
   overflow: hidden;
 }
+
+@media screen and (max-width: 1600px) {
+  .App {
+    background-color: red;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .App {
+    background-color: yellow;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .App{
+    background-color: yellowgreen;
+  }
+}

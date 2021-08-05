@@ -40,3 +40,47 @@ div.image-footer {
   display: inline-block;
   padding-top: 1rem;
 }
+
+@media screen and (max-width: 1600px) {
+  div.grid-area {
+    display: column;
+    column-gap: 5rem;
+    column-count: 2;
+    width: 70rem;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  div.grid-area {
+    display: column;
+    column-gap: 5rem;
+    column-count: 1;
+    width: 30rem;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.grid-area {
+    display: column;
+    column-gap: 5rem;
+    column-count: 1;
+    width: 20rem;
+    margin: 0 auto;
+  }
+  div.image-box {
+    border: 0.1rem solid black;
+    width: 20rem;
+    margin-bottom: 4rem;
+    height: fit-content;
+    box-sizing: border-box;
+    break-inside: avoid-column;
+    page-break-inside: avoid; /*for firefox*/
+    margin-bottom: 2rem;
+  }
+  img {
+    width: 20rem;
+    border-radius: 1.5rem;
+  }
+}

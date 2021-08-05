@@ -1,3 +1,4 @@
+import Footer from "./components/Footer";
 import GridImages from "./components/Grid";
 import Header from "./components/Header";
 import "./styles/App.css";
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <Header />
       <GridImages />
+      <Footer />
     </div>
   );
 }

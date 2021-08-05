@@ -60,9 +60,13 @@ button#right-button {
     flex-direction: column;
     height: 10rem;
     align-items: center;
+    justify-content: space-between;
     margin-bottom: 2rem;
   }
 }
 
 @media screen and (max-width: 600px) {
+  input.search-input {
+    width: 7rem;
+  }
 }

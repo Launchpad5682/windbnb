@@ -18,7 +18,7 @@ body::-webkit-scrollbar {
   overflow: hidden;
 }
 
-@media screen and (max-width: 1600px) {
+/* @media screen and (max-width: 1600px) {
   .App {
     background-color: red;
   }
@@ -34,4 +34,5 @@ body::-webkit-scrollbar {
   .App{
     background-color: yellowgreen;
   }
-}
+} */
+

@@ -78,7 +78,6 @@ div.image-footer {
     margin: 0 auto;
   }
   div.image-box {
-    border: 0.1rem solid black;
     width: 20rem;
     margin-bottom: 4rem;
     height: fit-content;

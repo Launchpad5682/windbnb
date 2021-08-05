@@ -29,10 +29,10 @@ function GridImages() {
                   {data.superHost ? (
                     <span className="superhost-span">SUPER HOST</span>
                   ) : null}
-                  <span>
+                  <span className="type-style">
                     {data.type}, {data.beds} beds
                   </span>
-                  <span className="rating-span">{data.rating}</span>
+                  <span className="rating-span">⭐{data.rating}</span>
                   <p className="title-para">{data.title}</p>
                 </div>
               </div>

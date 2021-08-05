@@ -12,7 +12,6 @@ img {
 }
 
 div.image-box {
-  border: 0.1rem solid black;
   width: 30rem;
   margin-bottom: 4rem;
   height: fit-content;
@@ -27,18 +26,27 @@ div.image-footer {
 }
 
 .superhost-span {
-  border: 0.1rem solid black;
+  border: 0.16rem solid black;
   border-radius: 1rem;
-  padding: 0.2rem 0.5rem;
+  font-weight: 800;
+  padding: 0.2rem 0.5rem; 
+  margin-right: 0.5rem;
+  cursor: pointer;
 }
 
 .rating-span {
   float: right;
 }
 
+.type-style{
+  font-weight: 200;
+  color: gray
+}
+
 .title-para {
-  display: inline-block;
-  padding-top: 1rem;
+  font-weight: 800;
+  font-size: 1.2rem;
+  padding-top: 0.2rem;
 }
 
 @media screen and (max-width: 1600px) {

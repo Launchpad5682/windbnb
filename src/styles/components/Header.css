@@ -4,7 +4,7 @@
   height: 8rem;
   padding-top: 2rem;
   padding-right: 2rem;
-  justify-content: space-around;
+  justify-content: space-between;
   align-content: center;
   box-sizing: border-box;
 }
@@ -50,3 +50,19 @@ button#right-button {
 }
 
 /*sliding functionality*/
+
+/*Media Queries */
+@media screen and (max-width: 1600px) {
+}
+
+@media screen and (max-width: 1200px) {
+  .header-class {
+    flex-direction: column;
+    height: 10rem;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+}

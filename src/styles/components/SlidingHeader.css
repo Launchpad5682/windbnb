@@ -70,8 +70,7 @@ div.left-down-div {
 }
 
 div.right-down-div {
-  /* position: fixed;
-  left: 45%; */
+  margin-left: 38rem;
 }
 
 @media screen and (max-width: 1600px) {
@@ -96,6 +95,9 @@ div.right-down-div {
     align-items: center;
     justify-content: center;
     width: 100%;
+  }
+  div.right-down-div {
+    margin-left: 0;
   }
 }
 
